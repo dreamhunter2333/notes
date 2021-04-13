@@ -27,10 +27,4 @@ jobs:
     - name: Push the Docker image
       run: docker push registry.cn-beijing.aliyuncs.com/dreamhunter/vuepress-notes:latest
     - name: Pull and Reboot
-      uses: appleboy/ssh-action@master
-      with:
-        host: ${{ secrets.ssh_host }}
-        username: ${{ secrets.ssh_username }}
-        password: ${{ secrets.ssh_password }}
-        port: 22
-        script: ${{ secrets.ssh_command }}
+      run: curl ${{ secrets.command_host }}
