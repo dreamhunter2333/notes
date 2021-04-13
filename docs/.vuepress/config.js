@@ -29,7 +29,7 @@ module.exports = {
         subSidebar: 'auto',
         sidebar: 'auto',
         // Git 仓库和编辑链接
-        repo: 'https://github.com/jinmu333', // 你的仓库
+        repo: 'https://github.com/jinmu333/vuepress-notes', // 你的仓库
         repoLabel: 'GitHub', // 导航栏上的文本
         lastUpdated: '上次更新',
         // 备案
