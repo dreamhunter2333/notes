@@ -27,10 +27,10 @@ jobs:
     - name: Push the Docker image
       run: docker push registry.cn-beijing.aliyuncs.com/dreamhunter/vuepress-notes:latest
     - name: Pull and Reboot
-      run: apt install expect -y && expect -c "
-          spawn ssh ${{ secrets.ssh_username }}@${{ secrets.ssh_host }} \"${{ secrets.ssh_command }}\"
-          expect {
-            \"*assword\" {set timeout 300; send \"${{ secrets.ssh_password }}\r\";}
-            \"yes/no\" {send \"yes\r\"; exp_continue;}
-          }
-          expect eof"
+      uses: appleboy/ssh-action@master
+      with:
+        host: ${{ secrets.ssh_host }}
+        username: ${{ secrets.ssh_username }}
+        password: ${{ secrets.ssh_password }}
+        port: 22
+        script: ${{ secrets.ssh_password }}
