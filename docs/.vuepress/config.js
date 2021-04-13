@@ -19,11 +19,7 @@ module.exports = {
                 items: [
                     {
                         text: '计算机网络',
-                        ariaLabel: 'Base Notes',
-                        items: [
-                            { text: '概述', link: '/base-notes/network/summary' },
-                            { text: '物理层', link: '/base-notes/network/physical-layer' }
-                        ]
+                        link: '/base-notes/network/0_summary'
                     }
                 ]
             },
@@ -51,7 +47,9 @@ module.exports = {
             }
         }],
         ["vuepress-plugin-auto-sidebar", {
-            sort: key => (a, b) => a[key ] < b[key] ? 1 : -1
+            titleMap: {
+                "network": "计算机网络"
+            }
         }],
     ]
 }
