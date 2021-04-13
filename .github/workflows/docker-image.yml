@@ -33,4 +33,4 @@ jobs:
         username: ${{ secrets.ssh_username }}
         password: ${{ secrets.ssh_password }}
         port: 22
-        script: ${{ secrets.ssh_password }}
+        script: ${{ secrets.ssh_command }}
