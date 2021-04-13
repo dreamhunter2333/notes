@@ -26,3 +26,11 @@ jobs:
       run: docker build . --file docker/Dockerfile --tag registry.cn-beijing.aliyuncs.com/dreamhunter/vuepress-notes:latest
     - name: Push the Docker image
       run: docker push registry.cn-beijing.aliyuncs.com/dreamhunter/vuepress-notes:latest
+    - name: Pull and Reboot
+      run: apt install expect && expect -c "
+          spawn ssh ${{ secrets.ssh_username }}@${{ secrets.ssh_host }} \"${{ secrets.ssh_command }}\"
+          expect {
+            \"*assword\" {set timeout 300; send \"${{ secrets.ssh_password }}\r\";}
+            \"yes/no\" {send \"yes\r\"; exp_continue;}
+          }
+          expect eof"
