@@ -1,0 +1,14 @@
+# bin/bash
+if [ $# -eq 2 ]
+then
+    if [ ! -d "docs/$1" ]
+    then
+        mkdir "docs/$1";
+    fi
+    echo "---
+title: $2
+date: '`date +"%Y-%m-%d %H:%M:%S"`'
+---" > "docs/$1/$2.md";
+else
+    echo "参数错误";
+fi

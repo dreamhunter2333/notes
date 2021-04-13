@@ -1,14 +1,14 @@
 ---
 home: true
 heroText: DreamHunter Notes
-tagline: null
+tagline: 此生无悔入四月，来世愿做友人A
 actionText: 开始
 actionLink: /base-notes/network/summary
 features:
-- title: 简洁至上
-  details: 以 Markdown 为中心的项目结构，以最少的配置帮助你专注于写作。
-- title: Vue驱动
-  details: 享受 Vue + webpack 的开发体验，在 Markdown 中使用 Vue 组件，同时可以使用 Vue 来开发自定义主题。
-- title: 高性能
-  details: VuePress 为每个页面预渲染生成静态的 HTML，同时在页面被加载的时候，将作为 SPA 运行。
+- title: 白马非马
+  details: 就像一部电影原谅惨败的票房，我走在街上闷着头游荡把心事流放，关掉电话卸下行囊席地坐路旁，一如乞人不需要形象
+- title: 如约而至
+  details: 如果早知道那天是我们最后一面，我绝不会和你讨论琐事浪费时间+等到人已不再奔忙，等到心也不再轻狂，我们相约老地方
+- title: 燕归巢
+  details: 寒梅落尽把冬了，衔春的燕想归巢，沿途的景，牵挂的人，两情迢迢，柳叶桨溅桃花浪，汀州里鹤眺远方，饮一盏岁月留香，唱一曲往事飞扬
 ---

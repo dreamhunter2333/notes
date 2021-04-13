@@ -5,12 +5,14 @@
   "license": "MIT",
   "scripts": {
     "docs:dev": "vuepress dev docs",
-    "build": "vuepress build docs"
+    "build": "vuepress build docs",
+    "new": "./new"
   },
   "devDependencies": {
-    "vuepress": "^1.8.2"
+    "vuepress": "^1.8.2",
+    "vuepress-theme-reco": "^1.6.6",
+    "vuepress-plugin-auto-sidebar": "^1.5.0"
   },
   "dependencies": {
-    "vuepress-theme-reco": "^1.6.6"
   }
 }
