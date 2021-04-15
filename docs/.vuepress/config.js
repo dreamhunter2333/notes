@@ -18,11 +18,16 @@ module.exports = {
                 ariaLabel: 'Base Notes',
                 items: [
                     {
-                        text: '计算机网络',
+                        text: '网络基础',
                         link: '/base-notes/network/0_summary'
+                    },
+                    {
+                        text: 'HTTP',
+                        link: '/base-notes/http'
                     }
                 ]
             },
+            { text: '参考资料', link: 'https://www.cyc2018.xyz' }
         ],
         author: 'Dreamhunter',
         smoothScroll: true,
@@ -48,6 +53,7 @@ module.exports = {
         }],
         ["vuepress-plugin-auto-sidebar", {
             titleMap: {
+                "base-notes": "基础知识",
                 "network": "计算机网络"
             }
         }],
