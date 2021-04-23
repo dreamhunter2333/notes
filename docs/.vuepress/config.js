@@ -24,6 +24,14 @@ module.exports = {
                     {
                         text: 'HTTP',
                         link: '/base-notes/http'
+                    },
+                    {
+                        text: 'IO 模型',
+                        link: '/base-notes/socket-io'
+                    },
+                    {
+                        text: '计算机操作系统',
+                        link: '/base-notes/compute-os/0_compute-os-summary'
                     }
                 ]
             },
