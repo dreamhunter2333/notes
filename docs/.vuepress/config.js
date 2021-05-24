@@ -32,6 +32,10 @@ module.exports = {
                     {
                         text: '计算机操作系统',
                         link: '/base-notes/compute-os/0_compute-os-summary'
+                    },
+                    {
+                        text: 'Linux',
+                        link: '/base-notes/linux'
                     }
                 ]
             },
