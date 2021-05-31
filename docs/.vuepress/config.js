@@ -39,6 +39,32 @@ module.exports = {
                     }
                 ]
             },
+            {
+                text: '数据库',
+                ariaLabel: 'Database',
+                items: [
+                    {
+                        text: 'SQL 语法',
+                        link: '/database/sql-grammar.md'
+                    },
+                    {
+                        text: 'SQL 练习',
+                        link: '/base-notes/http'
+                    },
+                    {
+                        text: '数据库系统原理',
+                        link: '/base-notes/socket-io'
+                    },
+                    {
+                        text: 'MySQL',
+                        link: '/base-notes/compute-os/0_compute-os-summary'
+                    },
+                    {
+                        text: 'Redis',
+                        link: '/base-notes/linux'
+                    }
+                ]
+            },
             { text: '参考资料', link: 'https://www.cyc2018.xyz' }
         ],
         author: 'Dreamhunter',
