@@ -45,15 +45,11 @@ module.exports = {
                 items: [
                     {
                         text: 'SQL 语法',
-                        link: '/database/sql-grammar.md'
-                    },
-                    {
-                        text: 'SQL 练习',
-                        link: '/base-notes/http'
+                        link: '/database/sql-grammar'
                     },
                     {
                         text: '数据库系统原理',
-                        link: '/base-notes/socket-io'
+                        link: '/database/database-system-theory'
                     },
                     {
                         text: 'MySQL',
@@ -92,7 +88,8 @@ module.exports = {
         ["vuepress-plugin-auto-sidebar", {
             titleMap: {
                 "base-notes": "基础知识",
-                "network": "计算机网络"
+                "network": "计算机网络",
+                "database": "数据库"
             }
         }],
     ]
