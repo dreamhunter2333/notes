@@ -53,11 +53,11 @@ module.exports = {
                     },
                     {
                         text: 'MySQL',
-                        link: '/base-notes/compute-os/0_compute-os-summary'
+                        link: '/database/mysql'
                     },
                     {
                         text: 'Redis',
-                        link: '/base-notes/linux'
+                        link: '/database/redis'
                     }
                 ]
             },
