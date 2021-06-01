@@ -61,6 +61,20 @@ module.exports = {
                     }
                 ]
             },
+            {
+                text: 'Java',
+                ariaLabel: 'Java',
+                items: [
+                    {
+                        text: 'Java 基础',
+                        link: '/java/java-base'
+                    },
+                    {
+                        text: 'Java 容器',
+                        link: '/java/java-container'
+                    }
+                ]
+            },
             { text: '参考资料', link: 'https://www.cyc2018.xyz' }
         ],
         author: 'Dreamhunter',
@@ -89,7 +103,8 @@ module.exports = {
             titleMap: {
                 "base-notes": "基础知识",
                 "network": "计算机网络",
-                "database": "数据库"
+                "database": "数据库",
+                "java": "Java"
             }
         }],
     ]
