@@ -72,6 +72,10 @@ module.exports = {
                     {
                         text: 'Java 容器',
                         link: '/java/java-container'
+                    },
+                    {
+                        text: 'Java 并发',
+                        link: '/java/java-concurrent'
                     }
                 ]
             },
