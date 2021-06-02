@@ -359,32 +359,32 @@ Java 提供了两种锁机制来控制多个线程对共享资源的互斥访问
 
 ### ReentrantLock
 
-    ReentrantLock 是 java.util.concurrent（J.U.C）包中的锁。
+ReentrantLock 是 java.util.concurrent（J.U.C）包中的锁。
 
-    ```java
-    public class LockExample {
+```java
+public class LockExample {
 
-        private Lock lock = new ReentrantLock();
+    private Lock lock = new ReentrantLock();
 
-        public void func() {
-            lock.lock();
-            try {
-                for (int i = 0; i < 10; i++) {
-                    System.out.print(i + " ");
-                }
-            } finally {
-                lock.unlock(); // 确保释放锁，从而避免发生死锁。
+    public void func() {
+        lock.lock();
+        try {
+            for (int i = 0; i < 10; i++) {
+                System.out.print(i + " ");
             }
+        } finally {
+            lock.unlock(); // 确保释放锁，从而避免发生死锁。
         }
     }
-    public static void main(String[] args) {
-        LockExample lockExample = new LockExample();
-        ExecutorService executorService = Executors.newCachedThreadPool();
-        executorService.execute(() -> lockExample.func());
-        executorService.execute(() -> lockExample.func());
-    }
-    0 1 2 3 4 5 6 7 8 9 0 1 2 3 4 5 6 7 8 9
-    ```
+}
+public static void main(String[] args) {
+    LockExample lockExample = new LockExample();
+    ExecutorService executorService = Executors.newCachedThreadPool();
+    executorService.execute(() -> lockExample.func());
+    executorService.execute(() -> lockExample.func());
+}
+0 1 2 3 4 5 6 7 8 9 0 1 2 3 4 5 6 7 8 9
+```
 
 ### 比较
 

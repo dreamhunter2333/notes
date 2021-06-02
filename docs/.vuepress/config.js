@@ -79,6 +79,16 @@ module.exports = {
                     }
                 ]
             },
+            {
+                text: '源码',
+                ariaLabel: 'Source Code',
+                items: [
+                    {
+                        text: 'Redis SDS',
+                        link: '/source-code/redis-sds'
+                    }
+                ]
+            },
             { text: '参考资料', link: 'https://www.cyc2018.xyz' }
         ],
         author: 'Dreamhunter',
@@ -108,7 +118,8 @@ module.exports = {
                 "base-notes": "基础知识",
                 "network": "计算机网络",
                 "database": "数据库",
-                "java": "Java"
+                "java": "Java",
+                "source-code": "源码",
             }
         }],
     ]
