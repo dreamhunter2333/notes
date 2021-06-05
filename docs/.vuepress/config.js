@@ -14,6 +14,16 @@ module.exports = {
         nav: [
             { text: '首页', link: '/' },
             {
+                text: '算法',
+                ariaLabel: 'algorithm',
+                items: [
+                    {
+                        text: '基础',
+                        link: '/algorithm/algorithm-base/0_algorithm_analysis'
+                    }
+                ]
+            },
+            {
                 text: '基础知识',
                 ariaLabel: 'Base Notes',
                 items: [
@@ -120,6 +130,7 @@ module.exports = {
                 "database": "数据库",
                 "java": "Java",
                 "source-code": "源码",
+                "algorithm-base": "算法",
             }
         }],
     ]
