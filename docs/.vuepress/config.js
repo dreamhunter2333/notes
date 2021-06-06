@@ -99,7 +99,23 @@ module.exports = {
                     }
                 ]
             },
-            { text: '参考资料', link: 'https://www.cyc2018.xyz' }
+            {
+                text: '面试',
+                link: '/interview/interview'
+            },
+            {
+                text: '参考资料',
+                items: [
+                    {
+                        text: 'www.cyc2018.xyz',
+                        link: 'https://www.cyc2018.xyz'
+                    },
+                    {
+                        text: 'doocs.github.io',
+                        link: 'https://doocs.github.io'
+                    }
+                ]
+            }
         ],
         author: 'Dreamhunter',
         smoothScroll: true,
