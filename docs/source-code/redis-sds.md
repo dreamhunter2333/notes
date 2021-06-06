@@ -41,7 +41,7 @@ struct sdshdr {
 
 那么接下来，我们就来看看最新的 Redis 是如何根据字符串的长度，使用不同的数据结构进行存储的
 
-### Redis SDS 最新实现
+## Redis SDS 最新实现
 
 在 Redis 3.2 版本之后（v3.2 - v6.0），Redis 将 SDS 划分为 5 种类型：
 
