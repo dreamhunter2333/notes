@@ -138,3 +138,13 @@ date: '2021-06-06 21:05:10'
 14. Mysql 分库分表
 15. redis 微信 token 缓存不一致 （设置一样的过期时间）
 16. 单点登录的实现
+
+## 2021-06-09 cityito 一面
+
+1. 项目介绍
+2. spring 如何解决 bean 的循环依赖
+3. 线程不安全，J.U.C - AQS 源码
+4. synchronized ReentrantLock 比较
+5. java 轻量级锁膨胀为重量级锁
+6. Redis zset 跳跃表 查询过程
+7. redis 分布式部署
