@@ -245,3 +245,62 @@ date: '2021-06-06 21:05:10'
 7. mysql 联合索引结构
 8. 处理数据库慢查询
 9. 大数相加
+
+## 2021-06-18 脉脉 一面
+
+1. 项目介绍
+2. http 499 状态码
+3. http 301 302 303 区别
+4. redis 数据结构
+5. leetcode [40] 组合总和 II
+6. leetcode [63] 不同路径 II
+7. 实现 m 天 n 次的流量检测
+8. mysql 索引
+
+## 2021-06-18 叽里呱啦 一面
+
+1. 分段数字
+
+    写一个函数：
+
+    给定一个整数的list，例如 [404, 401, 403, 405, 407, 409, 408]，未排序
+
+    输出，排序后的"分段数字":  [[401], [403, 405], [407, 409]]
+
+    当一个数字前后没有连续数字时，用一元组表示，如[401]；
+
+    当有连续数字出现时，用二元组表示“分段”，只需要首尾，如[403, 405]
+
+    ```python
+    def solution(nums):
+        res = []
+        n = len(nums)
+        i = 0
+        pre_num = float('inf')
+        while i < n:
+            for j in range(i+1, n):
+                if nums[j] >= nums[i]:
+                    continue
+                nums[i], nums[j] = nums[j], nums[i]
+            if not res or pre_num + 1 != nums[i]:
+                res.append([nums[i]])
+            else:
+                res[-1] = [res[-1][0], nums[i]]
+            pre_num = nums[i]
+            i += 1
+        return res
+
+
+    nums = [404, 401, 403, 405, 407, 409, 408]
+    print(solution(nums))
+
+    ```
+
+2. leetcode [958] 二叉树的完全性检验
+3. ArrayList LinkedList 区别
+4. redis 数据结构
+5. mysql 事务
+6. redis 事务和 mysql 事务的不同
+7. mysql 索引
+8. mq 重复消费 消息丢失
+9. redis 保证扣库存不被重复修改（lua 脚本？）
