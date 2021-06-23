@@ -371,3 +371,14 @@ date: '2021-06-06 21:05:10'
 6. Dockerfile RUN CMD ENTRYPOINT 区别 执行时机
 7. 输入 URL 到页面展示的过程
 8. 快排
+
+## 2021-06-23 微软 一面
+
+1. 字符串 indexof   abcd bc
+2. restful api 匹配 /account/{account}/id/{id} /account/123/id/456
+
+## 2021-06-23 阿里 一面
+
+1. [leetcode 560] 和为 k 的子数组
+2. redis
+3. 消息队列
