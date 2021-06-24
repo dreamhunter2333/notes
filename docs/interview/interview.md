@@ -403,3 +403,4 @@ date: '2021-06-06 21:05:10'
 
 1. 项目介绍
 2. Write a function to return the length of the longest consecutive sequence in a tree
+3. redis 设置成功了怎么保证持久化成功 (是坑，其实是问为什么不保证)
