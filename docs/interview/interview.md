@@ -560,12 +560,14 @@ def solution(nums):
 
     n = len(nums)
     dp = [1] * n
+    path = [[nums[i]] for i in range(n)]
 
     for i in range(n):
         for j in range(i):
-            if nums[i] > nums[j]:
-                dp[i] = max(dp[i], dp[j] + 1)
-    return max(dp)
+            if nums[i] > nums[j] and dp[j] + 1 > dp[i]:
+                dp[i] = dp[j] + 1
+                path[i] = path[j][:] + [nums[i]]
+    return max(path, key=len)
 
 
 print(solution([10, 22, 9, 33, 21]))
