@@ -416,3 +416,129 @@ date: '2021-06-06 21:05:10'
 ## 2021-06-25 哔哩哔哩 三面
 
 1. 项目介绍
+
+## 2021-06-28 微软 一面
+
+```python
+# 1.	Given n integers {a1, a2, … an} and a target sum k.
+# Find an integer sequence {b1, b2, … bn} such that
+#     1)	bi <= ai
+#     2)	b1 + b2 + … + bn = k
+#     3)	Minimize max(bi)
+
+# a[] = [2,1,5,6,2,3], k = 13
+# b[] = [2,1,3,3,2,2] max(bi) = 3
+# b[] = [2,1,4,4,2,3] max(bi) = 4
+
+# *?
+
+def solution(nums, k):
+    # b = nums[:]
+    delta = sum(nums) - k
+    n = len(nums)
+    if not nums or delta <= 0:
+        return nums
+    nums.sort()
+
+    pre = 0
+    high = 0
+    for i in range(n):
+        # 当前和
+        cur = pre + nums[i] * (n - i)
+        # print(pre, nums[i], (n - i), cur)
+        if cur >= k:
+            left = (k - pre) % (n - i)
+            high = (k - pre) // (n - i)
+            break
+        # 前缀
+        pre += nums[i]
+
+    return high
+
+print(solution([2,1,5,6,2,3], 16))
+```
+
+## 2021-06-28 微软 二面
+
+1. 求平方根
+2. 合并用户
+    给定一个列表 accounts，每个元素 accounts[i] 是一个字符串列表，其中第一个元素 accounts[i][0] 是 名称 (name)，其余元素是 emails 表示该账户的邮箱地址。
+
+    现在，我们想合并这些账户。如果两个账户都有一些共同的邮箱地址，则两个账户必定属于同一个人。请注意，即使两个账户具有相同的名称，它们也可能属于不同的人，因为人们可能具有相同的名称。一个人最初可以拥有任意数量的账户，但其所有账户都具有相同的名称。
+
+    合并账户后，按以下格式返回账户：每个账户的第一个元素是名称，其余元素是按字符 ASCII 顺序排列的邮箱地址。账户本身可以以任意顺序返回。
+
+```python
+def solution(num):
+    if num <= 0:
+        return
+    start = 0
+    end = num
+    while start < end:
+        mid = (start + end) / 2
+        temp = mid * mid
+        if abs(temp - num) < 0.0001:
+            return mid
+        elif temp > num:
+            end = mid
+        else:
+            start = mid
+
+
+def solution2(num):
+    if num < 1:
+        return 1 / solution(1 / num)
+    return solution(num)
+
+# print(solution2(0.5))
+
+# 给定一个列表 accounts，每个元素 accounts[i] 是一个字符串列表，其中第一个元素 accounts[i][0] 是 名称 (name)，其余元素是 emails 表示该账户的邮箱地址。
+
+# 现在，我们想合并这些账户。如果两个账户都有一些共同的邮箱地址，则两个账户必定属于同一个人。请注意，即使两个账户具有相同的名称，它们也可能属于不同的人，因为人们可能具有相同的名称。一个人最初可以拥有任意数量的账户，但其所有账户都具有相同的名称。
+
+# 合并账户后，按以下格式返回账户：每个账户的第一个元素是名称，其余元素是按字符 ASCII 顺序排列的邮箱地址。账户本身可以以任意顺序返回。
+
+from collections import defaultdict
+
+def solution3(accounts):
+    if not accounts:
+        return accounts
+
+    n = len(accounts)
+
+    cache_map = defaultdict(list)
+
+    for i in range(n):
+        flag = True
+        cur = set(accounts[i][1:])
+        del_ids = []
+        for j in cache_map:
+            if cache_map[j] and cur & set(cache_map[j]):
+                del_ids.append(j)
+                flag = False
+        if del_ids:
+            master = del_ids[0]
+            cache_map[master].extend(accounts[i][1:])
+            for z in del_ids[1:]:
+                cache_map[master].extend(cache_map[z])
+                del cache_map[z]
+
+        if flag:
+            cache_map[i].extend(accounts[i][1:])
+
+    return [
+        [accounts[p][0], sorted(set(cache_map[p]))]
+        for p in cache_map
+    ]
+
+
+
+print(solution3([
+    ['John', 'a@com', 'b@com'],
+    ['John', 'c@com', 'd@com'],
+    ['John', 'b@com', 'c@com'],
+    ['John1', 'e@com'],
+    ['John2', 'b@com'],
+    ['John3', 'b@com'],
+]))
+```
