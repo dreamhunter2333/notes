@@ -555,18 +555,17 @@ print(solution3([
 # 打印最长递归子序列，符合一种序列即可
 
 def solution(nums):
-    res = []
     if not nums:
-        return res
-    for num in nums:
-        flag = True
-        for r in res:
-            if r and r[-1] < num:
-                r.append(num)
-                flag = False
-        if flag:
-            res.append([num])
-    return sorted(res, key=len)[-1]
+        return 0
+
+    n = len(nums)
+    dp = [1] * n
+
+    for i in range(n):
+        for j in range(i):
+            if nums[i] > nums[j]:
+                dp[i] = max(dp[i], dp[j] + 1)
+    return max(dp)
 
 
 print(solution([10, 22, 9, 33, 21]))
