@@ -417,7 +417,7 @@ date: '2021-06-06 21:05:10'
 
 1. 项目介绍
 
-## 2021-06-28 微软 一面
+## 2021-06-28 微软 一轮
 
 ```python
 # 1.	Given n integers {a1, a2, … an} and a target sum k.
@@ -458,7 +458,7 @@ def solution(nums, k):
 print(solution([2,1,5,6,2,3], 16))
 ```
 
-## 2021-06-28 微软 二面
+## 2021-06-28 微软 二轮
 
 1. 求平方根
 2. 合并用户
@@ -541,4 +541,34 @@ print(solution3([
     ['John2', 'b@com'],
     ['John3', 'b@com'],
 ]))
+```
+
+## 2021-06-28 微软 三轮
+
+1. 系统之间认证
+2. redis 缓存相关问题
+3. 手写LRU
+4. 最长递增子序列
+
+```python
+#  {10, 22, 9, 33, 21} -> {10, 22, 33}
+# 打印最长递归子序列，符合一种序列即可
+
+def solution(nums):
+    res = []
+    if not nums:
+        return res
+    for num in nums:
+        flag = True
+        for r in res:
+            if r and r[-1] < num:
+                r.append(num)
+                flag = False
+        if flag:
+            res.append([num])
+    return sorted(res, key=len)[-1]
+
+
+print(solution([10, 22, 9, 33, 21]))
+
 ```
