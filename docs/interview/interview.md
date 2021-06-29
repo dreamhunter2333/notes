@@ -574,7 +574,7 @@ print(solution([10, 22, 9, 33, 21]))
 
 ```
 
-## 2021-06-28 微软 四轮
+## 2021-06-29 微软 四轮
 
 转换数字 如 六百一十三万五千五百五十五
 
@@ -619,3 +619,16 @@ def solution(s):
 
 print(solution("六百一十三万五千五百五十五"))
 ```
+
+## 2021-06-29 酷家乐 一面
+
+1. oauth2
+2. java JUC 原理
+3. 线程池
+4. ReentrantLock synchronized 对比
+5. wait() 和 sleep() 区别
+6. 线程的状态
+7. spring IOC AOP
+8. spring 事务传播级别
+9. MyBatis
+10. JWT
