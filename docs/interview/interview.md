@@ -573,3 +573,49 @@ def solution(nums):
 print(solution([10, 22, 9, 33, 21]))
 
 ```
+
+## 2021-06-28 微软 四轮
+
+转换数字 如 六百一十三万五千五百五十五
+
+```python
+def solution(s):
+    nums_map = {
+        "一": 1,
+        "二": 2,
+        "三": 3,
+        "四": 4,
+        "五": 5,
+        "六": 6,
+    }
+    cache_map = {
+        "千": 1000,
+        "百": 100,
+        "十": 10
+    }
+
+    n = len(s)
+
+    temp = 0
+    cur_base = 1
+    base_num = 1
+
+    for i in range(n-1, -1, -1):
+        item = s[i]
+        if item in nums_map:
+            temp += nums_map[item] * base_num * cur_base
+        elif item in cache_map:
+            base_num = cache_map[item]
+
+        if item == "万":
+            cur_base = 10000
+            base_num = 1
+        elif item == "亿":
+            cur_base = 100000000
+            base_num = 1
+
+    return temp
+
+
+print(solution("六百一十三万五千五百五十五"))
+```
