@@ -633,3 +633,9 @@ print(solution("六百一十三万五千五百五十五"))
 9. JVM 结构
 10. MyBatis
 11. JWT
+
+## 2021-07-01 趣科技 一面
+
+1. 多线程 线程池
+2. https 过程
+3. get 和 post 区别 delete update, get 为什么没 body
