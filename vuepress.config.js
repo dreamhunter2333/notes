@@ -126,7 +126,7 @@ module.exports = {
     plugins: [
         ['@vuepress/pwa', {skipWaiting: true}],
         ['@vuepress/plugin-search', {}],
-        [path.resolve(__dirname, './vuepress-plugin-sitemap'), {
+        [path.resolve(__dirname, 'vuepress-plugin-sitemap'), {
             hostname: 'https://notes.jcstaff.club'
         }]
     ]
