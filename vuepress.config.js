@@ -1,22 +1,15 @@
 module.exports = {
     title: 'DreamHunter Notes',
     description: '此生无悔入四月，来世愿做友人A',
-    theme: 'reco',
     head: [
         ['link', { rel: 'icon', href: '/favicon.ico' }]
     ],
-    locales: {
-        '/': {
-            lang: 'zh-CN'
-        }
-    },
     themeConfig: {
-        nav: [
+        navbar: [
             { text: '首页', link: '/' },
             {
                 text: '算法',
-                ariaLabel: 'algorithm',
-                items: [
+                children: [
                     {
                         text: '基础',
                         link: '/algorithm/algorithm-base/0_algorithm_analysis'
@@ -25,8 +18,7 @@ module.exports = {
             },
             {
                 text: '基础知识',
-                ariaLabel: 'Base Notes',
-                items: [
+                children: [
                     {
                         text: '网络基础',
                         link: '/base-notes/network/0_summary'
@@ -51,8 +43,7 @@ module.exports = {
             },
             {
                 text: '数据库',
-                ariaLabel: 'Database',
-                items: [
+                children: [
                     {
                         text: 'SQL 语法',
                         link: '/database/sql-grammar'
@@ -73,8 +64,7 @@ module.exports = {
             },
             {
                 text: 'Java',
-                ariaLabel: 'Java',
-                items: [
+                children: [
                     {
                         text: 'Java 基础',
                         link: '/java/java-base'
@@ -91,8 +81,7 @@ module.exports = {
             },
             {
                 text: '源码',
-                ariaLabel: 'Source Code',
-                items: [
+                children: [
                     {
                         text: 'Redis SDS',
                         link: '/source-code/redis-sds'
@@ -105,7 +94,7 @@ module.exports = {
             },
             {
                 text: '参考资料',
-                items: [
+                children: [
                     {
                         text: 'www.cyc2018.xyz',
                         link: 'https://www.cyc2018.xyz'
@@ -119,12 +108,13 @@ module.exports = {
         ],
         author: 'Dreamhunter',
         smoothScroll: true,
-        subSidebar: 'auto',
         sidebar: 'auto',
         // Git 仓库和编辑链接
         repo: 'https://github.com/jinmu333/vuepress-notes', // 你的仓库
         repoLabel: 'GitHub', // 导航栏上的文本
-        lastUpdated: '上次更新',
+        editLink: false,
+        contributors: false,
+        lastUpdatedText: '上次更新',
         // 备案
         record: '鲁ICP备2021007677号',
         recordLink: 'http://beian.miit.gov.cn/',
@@ -132,22 +122,7 @@ module.exports = {
         startYear: '2021'
     },
     plugins: [
-        ['@vuepress/pwa', {
-            serviceWorker: true,
-            updatePopup: {
-                message: "发现新内容可用",
-                buttonText: "刷新"
-            }
-        }],
-        ["vuepress-plugin-auto-sidebar", {
-            titleMap: {
-                "base-notes": "基础知识",
-                "network": "计算机网络",
-                "database": "数据库",
-                "java": "Java",
-                "source-code": "源码",
-                "algorithm-base": "算法",
-            }
-        }],
+        ['@vuepress/pwa', {skipWaiting: true}],
+        ['@vuepress/plugin-search', {}]
     ]
 }
