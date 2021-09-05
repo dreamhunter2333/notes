@@ -124,9 +124,9 @@ module.exports = {
         startYear: '2021'
     },
     plugins: [
-        ['@vuepress/pwa', {skipWaiting: true}],
+        ['@vuepress/pwa', { skipWaiting: true }],
         ['@vuepress/plugin-search', {}],
-        [path.resolve(__dirname, 'vuepress-plugin-sitemap'), {
+        ['@jinmu333/vuepress-plugin-sitemap', {
             hostname: 'https://notes.jcstaff.club'
         }]
     ]

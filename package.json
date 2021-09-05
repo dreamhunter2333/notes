@@ -12,7 +12,7 @@
     "@vuepress/plugin-back-to-top": "^2.0.0-beta.25",
     "@vuepress/plugin-pwa": "^2.0.0-beta.25",
     "@vuepress/plugin-search": "^2.0.0-beta.25",
-    "sitemap": "^3.0.0",
+    "@jinmu333/vuepress-plugin-sitemap": "git+https://github.com/jinmu333/vuepress-plugin-sitemap.git",
     "vuepress": "^2.0.0-beta.25"
   }
 }
