@@ -1,3 +1,5 @@
+const { path } = require('@vuepress/utils')
+
 module.exports = {
     title: 'DreamHunter Notes',
     description: '此生无悔入四月，来世愿做友人A',
@@ -123,6 +125,9 @@ module.exports = {
     },
     plugins: [
         ['@vuepress/pwa', {skipWaiting: true}],
-        ['@vuepress/plugin-search', {}]
+        ['@vuepress/plugin-search', {}],
+        [path.resolve(__dirname, './vuepress-plugin-sitemap'), {
+            hostname: 'https://notes.jcstaff.club'
+        }]
     ]
 }
