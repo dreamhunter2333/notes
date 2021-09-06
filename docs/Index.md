@@ -12,3 +12,20 @@ features:
 - title: 燕归巢
   details: 寒梅落尽把冬了，衔春的燕想归巢，沿途的景，牵挂的人，两情迢迢，柳叶桨溅桃花浪，汀州里鹤眺远方，饮一盏岁月留香，唱一曲往事飞扬
 ---
+
+<ins
+  class="adsbygoogle"
+  style="display:block"
+  data-ad-client="ca-pub-8486711392183862"
+  data-ad-slot="3296514195"
+  data-ad-format="auto"
+  data-full-width-responsive="true">
+</ins>
+
+<script>
+export default {
+  mounted() {
+    (window.adsbygoogle = window.adsbygoogle || []).push({});
+  }
+}
+</script>
