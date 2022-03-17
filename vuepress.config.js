@@ -135,7 +135,7 @@ module.exports = {
         ['@vuepress/pwa', { skipWaiting: true }],
         ['@vuepress/plugin-search', {}],
         ['@jinmu333/vuepress-plugin-sitemap', {
-            hostname: 'https://notes.jcstaff.club'
+            hostname: 'https://notes.dreamhunter2333.com'
         }]
     ]
 }
