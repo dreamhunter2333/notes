@@ -125,9 +125,6 @@ module.exports = {
         editLink: false,
         contributors: false,
         lastUpdatedText: '上次更新',
-        // 备案
-        record: '鲁ICP备2021007677号',
-        recordLink: 'http://beian.miit.gov.cn/',
         // 项目开始时间，只填写年份
         startYear: '2021'
     },
