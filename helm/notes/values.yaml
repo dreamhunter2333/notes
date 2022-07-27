@@ -1,7 +1,7 @@
 image:
   repository: dreamhunter2333.azurecr.io/notes/notes
   pullPolicy: IfNotPresent
-  tag: "v0.0.5"
+  tag: "v0.0.6"
 
 ingress:
   enabled: true
