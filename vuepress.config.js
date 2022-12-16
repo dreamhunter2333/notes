@@ -120,7 +120,7 @@ module.exports = {
         smoothScroll: true,
         sidebar: 'auto',
         // Git 仓库和编辑链接
-        repo: 'https://github.com/jinmu333/vuepress-notes', // 你的仓库
+        repo: 'https://github.com/dreamhunter2333/vuepress-notes', // 你的仓库
         repoLabel: 'GitHub', // 导航栏上的文本
         editLink: false,
         contributors: false,
@@ -131,7 +131,7 @@ module.exports = {
     plugins: [
         ['@vuepress/pwa', { skipWaiting: true }],
         ['@vuepress/plugin-search', {}],
-        ['@jinmu333/vuepress-plugin-sitemap', {
+        ['@dreamhunter2333/vuepress-plugin-sitemap', {
             hostname: 'https://notes.dreamhunter2333.com'
         }]
     ]

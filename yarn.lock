@@ -877,9 +877,9 @@
     "@babel/helper-validator-identifier" "^7.14.9"
     to-fast-properties "^2.0.0"
 
-"@jinmu333/vuepress-plugin-sitemap@git+https://github.com/jinmu333/vuepress-plugin-sitemap.git":
+"@dreamhunter2333/vuepress-plugin-sitemap@git+https://github.com/dreamhunter2333/vuepress-plugin-sitemap.git":
   version "2.3.1"
-  resolved "git+https://github.com/jinmu333/vuepress-plugin-sitemap.git#8d2d9cdd6f217b41c39a52e4a3c0cb5aeb46516a"
+  resolved "git+https://github.com/dreamhunter2333/vuepress-plugin-sitemap.git#8d2d9cdd6f217b41c39a52e4a3c0cb5aeb46516a"
   dependencies:
     sitemap "^3.0.0"
 
