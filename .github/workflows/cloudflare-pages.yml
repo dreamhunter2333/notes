@@ -3,7 +3,7 @@ name: cloudflare pages Deploy
 on:
   push:
     branches: [ main ]
-    paths-ignore:
+    paths:
       - 'docs/**'
       - 'package.json'
       - 'vuepress.config.js'
