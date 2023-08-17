@@ -1,32 +1,31 @@
-name: cloudflare pages Deploy
+name: Cloudflare Pages Deploy
 
 on:
   workflow_dispatch:
   push:
-    branches: [ main ]
+    branches: [main]
     paths:
-      - 'docs/**'
-      - 'package.json'
-      - 'vuepress.config.js'
+      - "docs/**"
+      - "package.json"
+      - "vuepress.config.js"
 
 jobs:
-
   deploy:
     name: Deploy
 
     runs-on: ubuntu-latest
 
     steps:
-    - uses: actions/checkout@v3
-  
-    - name: Install and Build
-      run: |
-        export NODE_OPTIONS=--openssl-legacy-provider
-        yarn && yarn build
+      - uses: actions/checkout@v3
 
-    - name: Deploy
-      uses: cloudflare/wrangler-action@v3
-      with:
-        apiToken: ${{ secrets.CF_API_TOKEN }}
-        accountId: ${{ secrets.CF_ACCOUNT_ID }}
-        command: pages deploy ./docs/.vuepress/dist --project-name=notes --branch production
+      - name: Install and Build
+        run: |
+          export NODE_OPTIONS=--openssl-legacy-provider
+          yarn && yarn build
+
+      - name: Deploy
+        uses: cloudflare/wrangler-action@v3
+        with:
+          apiToken: ${{ secrets.CF_API_TOKEN }}
+          accountId: ${{ secrets.CF_ACCOUNT_ID }}
+          command: pages deploy ./docs/.vuepress/dist --project-name=notes --branch production --commit-dirty=true

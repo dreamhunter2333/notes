@@ -1,8 +1,6 @@
-const { path } = require('@vuepress/utils')
-
 module.exports = {
     title: 'DreamHunter Notes',
-    description: '此生无悔入四月，来世愿做友人A',
+    description: '此生无悔入四月, 来世愿做友人A',
     head: [
         ['link', { rel: 'icon', href: '/favicon.ico' }],
         [
