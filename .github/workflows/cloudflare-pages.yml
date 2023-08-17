@@ -17,14 +17,13 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-    - uses: actions/checkout@v2
+    - uses: actions/checkout@v3
   
     - name: Install and Build
       run: |
         export NODE_OPTIONS=--openssl-legacy-provider
         yarn && yarn build
 
-    - uses: actions/checkout@v3
     - name: Deploy
       uses: cloudflare/wrangler-action@v3
       with:
