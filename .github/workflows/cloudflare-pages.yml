@@ -5,6 +5,7 @@ on:
   push:
     branches: [main]
     paths:
+      - ".github/workflows/cloudflare-pages.yml"
       - "docs/**"
       - "package.json"
 
@@ -30,7 +31,7 @@ jobs:
           run_install: false
 
       - name: Build
-        run: pnpm install && pnpm build
+        run: pnpm install && pnpm docs:build
 
       - name: Deploy
         uses: cloudflare/wrangler-action@v3
