@@ -10,11 +10,9 @@ on:
       - "package.json"
 
 jobs:
-  deploy:
-    name: Deploy
-
+  build:
+    name: Build
     runs-on: ubuntu-latest
-
     steps:
       - uses: actions/checkout@v3
 
@@ -46,10 +44,24 @@ jobs:
       - name: Build
         run: pnpm install && pnpm docs:build
 
+      - uses: actions/upload-artifact@v3
+        with:
+          name: dist
+          path: docs/.vitepress/dist
+          retention-days: 1
+
+  deploy:
+    name: Deploy
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/download-artifact@v3
+        with:
+          name: dist
+          path: dist
+
       - name: Deploy
         uses: cloudflare/wrangler-action@v3
         with:
           apiToken: ${{ secrets.CF_API_TOKEN }}
           accountId: ${{ secrets.CF_ACCOUNT_ID }}
-          working-directory: ./docs/.vitepress
           command: pages deploy ./dist --project-name=notes --branch production --commit-dirty=true
