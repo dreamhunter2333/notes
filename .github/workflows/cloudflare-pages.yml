@@ -44,10 +44,13 @@ jobs:
       - name: Build
         run: pnpm install && pnpm docs:build
 
+      - name: Tar dist
+        run: tar -zcvf dist.tar.gz docs/.vitepress/dist
+
       - uses: actions/upload-artifact@v3
         with:
-          name: dist
-          path: docs/.vitepress/dist
+          name: dist.tar.gz
+          path: dist.tar.gz
           retention-days: 1
 
   deploy:
@@ -57,12 +60,15 @@ jobs:
     steps:
       - uses: actions/download-artifact@v3
         with:
-          name: dist
-          path: dist
+          name: dist.tar.gz
+          path: dist.tar.gz
+
+      - name: Extract dist
+        run: tar -zxvf dist.tar.gz
 
       - name: Deploy
         uses: cloudflare/wrangler-action@v3
         with:
           apiToken: ${{ secrets.CF_API_TOKEN }}
           accountId: ${{ secrets.CF_ACCOUNT_ID }}
-          command: pages deploy ./dist --project-name=notes --branch production --commit-dirty=true
+          command: pages deploy ./docs/.vitepress/dist --project-name=notes --branch production --commit-dirty=true
