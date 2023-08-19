@@ -3,6 +3,8 @@ title: Redis 6.0 源码——SDS
 date: '2021-06-02 20:46:39'
 ---
 
+# Redis 6.0 源码——SDS
+
 [原文](https://doocs.github.io/source-code-hunter/#/docs/Redis/redis-sds)
 
 SDS（Simple Dynamic Strings, 简单动态字符串）是 Redis 的一种基本数据结构，主要是用于存储字符串和整数

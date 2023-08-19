@@ -1,6 +1,6 @@
 .DS_Store
-docs/.vuepress/.cache
-docs/.vuepress/.temp
+docs/.vitepress/.cache
+docs/.vitepress/.temp
 node_modules/
-docs/.vuepress/dist/
+docs/.vitepress/dist/
 yarn-error.log

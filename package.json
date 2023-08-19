@@ -1,18 +1,14 @@
 {
-  "name": "vuepress-notes",
+  "name": "notes",
   "version": "1.0.0",
-  "main": "index.js",
   "license": "MIT",
   "scripts": {
-    "dev": "vuepress dev docs",
-    "build": "vuepress build docs",
+    "docs:dev": "vitepress dev docs",
+    "docs:build": "vitepress build docs",
+    "docs:preview": "vitepress preview docs",
     "new": "./new"
   },
   "devDependencies": {
-    "@vuepress/plugin-back-to-top": "^2.0.0-beta.25",
-    "@vuepress/plugin-pwa": "^2.0.0-beta.25",
-    "@vuepress/plugin-search": "^2.0.0-beta.25",
-    "@dreamhunter2333/vuepress-plugin-sitemap": "git+https://github.com/dreamhunter2333/vuepress-plugin-sitemap.git",
-    "vuepress": "^2.0.0-beta.25"
+    "vitepress": "1.0.0-rc.4"
   }
 }

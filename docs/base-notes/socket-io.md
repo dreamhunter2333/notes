@@ -3,6 +3,8 @@ title: Socket Linux IO 模型
 date: '2021-04-16 00:16:49'
 ---
 
+# Socket Linux IO 模型
+
 ## 一、I/O 模型
 
 一个输入操作通常包括两个阶段：
@@ -32,7 +34,7 @@ Unix 有五种 I/O 模型：
 ssize_t recvfrom(int sockfd, void *buf, size_t len, int flags, struct sockaddr *src_addr, socklen_t *addrlen);
 ```
 
-![blocking-io](/base-notes/blocking-io.png)
+![blockingio](/base-notes/blocking-io.png)
 
 ### 非阻塞式 I/O
 
