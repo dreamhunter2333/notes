@@ -131,7 +131,7 @@ export default defineConfig({
       }
     ],
     socialLinks: [
-      { icon: 'github', link: 'https://github.com/vuejs/vitepress' }
+      { icon: 'github', link: 'https://github.com/dreamhunter2333/notes' }
     ],
     footer: {
       copyright: 'Copyright © 2023 DreamHunter'
