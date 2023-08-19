@@ -51,5 +51,5 @@ jobs:
         with:
           apiToken: ${{ secrets.CF_API_TOKEN }}
           accountId: ${{ secrets.CF_ACCOUNT_ID }}
-          workingDirectory: docs
-          command: pages deploy ./.vitepress/dist --project-name=notes --branch production --commit-dirty=true
+          working-directory: ./docs/.vitepress
+          command: pages deploy ./dist --project-name=notes --branch production --commit-dirty=true
