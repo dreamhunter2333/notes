@@ -61,10 +61,10 @@ jobs:
       - uses: actions/download-artifact@v3
         with:
           name: dist.tar.gz
-          path: dist.tar.gz
+          path: artifacts
 
       - name: Extract dist
-        run: tar -zxvf dist.tar.gz
+        run: tar -zxvf artifacts/dist.tar.gz
 
       - name: Deploy
         uses: cloudflare/wrangler-action@v3
