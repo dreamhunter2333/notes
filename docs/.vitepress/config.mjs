@@ -20,6 +20,7 @@ export default defineConfig({
   ],
   themeConfig: {
     lastUpdated: true,
+    outline: "deep",
     search: {
       provider: 'local'
     },
