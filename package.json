@@ -3,12 +3,14 @@
   "version": "1.0.0",
   "license": "MIT",
   "scripts": {
-    "docs:dev": "vitepress dev docs",
-    "docs:build": "vitepress build docs",
-    "docs:preview": "vitepress preview docs",
+    "dev": "vitepress dev docs",
+    "build": "vitepress build docs",
+    "preview": "vitepress preview docs",
+    "deploy": "npm run build && wrangler pages deploy ./docs/.vitepress/dist --project-name=notes --branch production --commit-dirty=true",
     "new": "./new"
   },
   "devDependencies": {
-    "vitepress": "1.0.0-rc.4"
+    "vitepress": "^1.1.0",
+    "wrangler": "^3.50.0"
   }
 }
