@@ -2,6 +2,7 @@
   "name": "notes",
   "version": "1.0.0",
   "license": "MIT",
+  "type": "module",
   "scripts": {
     "dev": "vitepress dev docs",
     "build": "vitepress build docs",
@@ -10,7 +11,7 @@
     "new": "./new"
   },
   "devDependencies": {
-    "vitepress": "^1.1.0",
-    "wrangler": "^3.50.0"
+    "vitepress": "^1.2.3",
+    "wrangler": "^3.61.0"
   }
 }

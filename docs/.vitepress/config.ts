@@ -1,9 +1,10 @@
 import { defineConfig } from 'vitepress'
 
-// https://vitepress.dev/reference/site-config
 export default defineConfig({
   title: "DreamHunter Notes",
   description: "此生无悔入四月, 来世愿做友人A",
+  lang: 'zh-CN',
+  lastUpdated: true,
   sitemap: {
     hostname: 'https://notes.dreamhunter2333.com'
   },
@@ -13,13 +14,12 @@ export default defineConfig({
       "script",
       {
         "data-ad-client": "ca-pub-8486711392183862",
-        async: true,
+        async: "true",
         src: "https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js",
       }
     ]
   ],
   themeConfig: {
-    lastUpdated: true,
     outline: "deep",
     search: {
       provider: 'local'
