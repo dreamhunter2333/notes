@@ -22,14 +22,5 @@ const members = [
 </script>
 
 <VPTeamPage>
-  <VPTeamPageTitle>
-    <template #title>
-      作者
-    </template>
-    <template #lead>
-    </template>
-  </VPTeamPageTitle>
-  <VPTeamMembers
-    :members="members"
-  />
+  <VPTeamMembers :members="members" />
 </VPTeamPage>
